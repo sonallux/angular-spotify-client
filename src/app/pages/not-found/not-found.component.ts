@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
+import { MatAnchor } from '@angular/material/button';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
   standalone: true,
-  imports: [MatButtonModule, RouterLink],
+  imports: [MatAnchor, RouterLink],
 })
 export class NotFoundComponent {}

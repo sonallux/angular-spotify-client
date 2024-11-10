@@ -12,7 +12,18 @@ import { filterNil } from 'ngxtension/filter-nil';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TrackDurationPipe } from '../../shared/pipes/track-duration.pipe';
 import { ReleaseDatePipe } from '../../shared/pipes/release-date.pipe';
-import { MatTableModule } from '@angular/material/table';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow,
+  MatHeaderRowDef,
+  MatRow,
+  MatRowDef,
+  MatTable,
+} from '@angular/material/table';
 import { ArtistLinkComponent } from '../../shared/artist-link/artist-link.component';
 import { AsyncPipe, DecimalPipe } from '@angular/common';
 
@@ -23,11 +34,20 @@ import { AsyncPipe, DecimalPipe } from '@angular/common';
   imports: [
     HeroHeaderComponent,
     ArtistLinkComponent,
-    MatTableModule,
     AsyncPipe,
     DecimalPipe,
     ReleaseDatePipe,
     TrackDurationPipe,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatCell,
+    MatCellDef,
+    MatHeaderRow,
+    MatHeaderRowDef,
+    MatRow,
+    MatRowDef,
   ],
 })
 export class AlbumComponent {
