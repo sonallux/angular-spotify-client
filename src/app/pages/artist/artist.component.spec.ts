@@ -1,11 +1,12 @@
 import { ArtistComponent } from './artist.component';
 import { render, screen } from '@testing-library/angular';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('ArtistComponent', () => {
   it('should render', async () => {
     await render(ArtistComponent, {
-      imports: [HttpClientTestingModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
 
     expect(await screen.findByRole('button')).toBeDefined();

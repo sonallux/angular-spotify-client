@@ -15,10 +15,21 @@ import { injectParams } from '../../shared/injectors/inject-params';
 import { filterNil } from 'ngxtension/filter-nil';
 import { TrackDurationPipe } from '../../shared/pipes/track-duration.pipe';
 import { CardListComponent } from '../../shared/card-list/card-list.component';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButton } from '@angular/material/button';
 import { AlbumLinkComponent } from '../../shared/album-link/album-link.component';
 import { ArtistLinkComponent } from '../../shared/artist-link/artist-link.component';
-import { MatTableModule } from '@angular/material/table';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow,
+  MatHeaderRowDef,
+  MatRow,
+  MatRowDef,
+  MatTable,
+} from '@angular/material/table';
 import { AsyncPipe, DecimalPipe } from '@angular/common';
 
 const albumTypeNames: Record<string, string> = {
@@ -34,10 +45,19 @@ const albumTypeNames: Record<string, string> = {
   providers: [ReleaseDatePipe],
   imports: [
     HeroHeaderComponent,
-    MatTableModule,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatCell,
+    MatCellDef,
+    MatHeaderRow,
+    MatHeaderRowDef,
+    MatRow,
+    MatRowDef,
     ArtistLinkComponent,
     AlbumLinkComponent,
-    MatButtonModule,
+    MatButton,
     CardListComponent,
     AsyncPipe,
     DecimalPipe,

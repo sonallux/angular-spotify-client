@@ -14,7 +14,18 @@ import { RouterLink } from '@angular/router';
 import { TrackDurationPipe } from '../../shared/pipes/track-duration.pipe';
 import { AlbumLinkComponent } from '../../shared/album-link/album-link.component';
 import { ArtistLinkComponent } from '../../shared/artist-link/artist-link.component';
-import { MatTableModule } from '@angular/material/table';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow,
+  MatHeaderRowDef,
+  MatRow,
+  MatRowDef,
+  MatTable,
+} from '@angular/material/table';
 import { AsyncPipe, DatePipe, DecimalPipe } from '@angular/common';
 import { PlaylistDescriptionPipe } from '../../shared/pipes/playlist-description.pipe';
 
@@ -29,7 +40,16 @@ export interface PlaylistTrack extends PlaylistedTrack {
   imports: [
     HeroHeaderComponent,
     RouterLink,
-    MatTableModule,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatCell,
+    MatCellDef,
+    MatHeaderRow,
+    MatHeaderRowDef,
+    MatRow,
+    MatRowDef,
     ArtistLinkComponent,
     AlbumLinkComponent,
     AsyncPipe,

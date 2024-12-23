@@ -1,7 +1,7 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-search-box',
@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
     class: 'inline-flex items-center text-base/8',
   },
   standalone: true,
-  imports: [MatIconModule, MatButtonModule],
+  imports: [MatIcon, MatIconButton],
 })
 export class SearchBoxComponent {
   private readonly searchDebounce = 300;

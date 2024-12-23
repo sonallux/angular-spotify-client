@@ -52,17 +52,17 @@
 }
 
 .skeleton-wave {
-  $accent-palette: map.get(mat.get-color-config($angular-music-theme), accent);
+  $accent-palette: map.get(mat.m2-get-color-config($angular-music-theme), accent);
 
   @apply relative overflow-hidden;
-  background-color: mat.get-color-from-palette($accent-palette, 700);
+  background-color: mat.m2-get-color-from-palette($accent-palette, 700);
 
   &:after {
     @apply absolute inset-0 content-[''];
     background-image: linear-gradient(
       90deg,
       transparent,
-      mat.get-color-from-palette($accent-palette, 600),
+      mat.m2-get-color-from-palette($accent-palette, 600),
       transparent
     );
     animation: skeleton-wave-keyframes 1.75s linear infinite;

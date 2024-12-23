@@ -1,8 +1,14 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
+import { MatDivider } from '@angular/material/divider';
+import { MatIcon } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MatListModule } from '@angular/material/list';
+import {
+  MatListItem,
+  MatListItemIcon,
+  MatListItemTitle,
+  MatListSubheaderCssMatStyler,
+  MatNavList,
+} from '@angular/material/list';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -10,11 +16,15 @@ import { NgOptimizedImage } from '@angular/common';
   templateUrl: './sidenav.component.html',
   standalone: true,
   imports: [
-    MatListModule,
+    MatNavList,
+    MatListItem,
+    MatListItemIcon,
+    MatListItemTitle,
+    MatListSubheaderCssMatStyler,
     RouterLink,
     RouterLinkActive,
-    MatIconModule,
-    MatDividerModule,
+    MatIcon,
+    MatDivider,
     NgOptimizedImage,
   ],
 })
